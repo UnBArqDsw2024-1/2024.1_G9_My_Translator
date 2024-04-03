@@ -1,29 +1,27 @@
-# RepositorioTemplate
-Esse repositório é para ser utilizado pelos grupos como um template inicial.
-As seções do Template NÃO DEVEM SER OMITIDAS, sendo TODAS RELEVANTES.
-Demais diretrizes constam no Moodle.
-
-**!! Atenção: Renomeie o seu repositório para (Ano.Semestre)_(Grupo)_(NomeDoProjeto)*. !!** 
-
-**!! *Não coloque os nomes dos alunos no título do repositório*. !!**
-
-**!! *Exemplo de título correto: 2023.1_G1_ProjetoPandora*. !!** 
- 
- (Apague esses comentários)
-
-# Nome do Projeto
+# My Translator
 
 **Código da Disciplina**: FGA0208<br>
-**Número do Grupo**: XX<br>
+**Número do Grupo**: 09<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 190127708  |  Daniel Ashton Oda |
+| 18011332  |  Francisco Mizael Santos da Silva |
+| 200049020  |  Gabriel Barbosa Alencar |
+| 200020323  |  Jefferson Sena Oliveira |
+| 211041043  |  Juan Pablo Ricarte de Barros  |
+| 211031744  |  Júlio César Costa |
+| 211031403  |  Marcus Vinicius Cunha Dantas |
+| 200059904  |  Pedro Campos Borges |
+| 211062375  |  Pedro Eduardo Santos Sousa |
+| 190036761  |  Pedro Victor Lima Torreão |
+| 190019492  |  Renato Gabriel Moreira Carvalho |
+| 202028973  |  Tiago Albuquerque de Lima |
+| 190020521  |  Valderson Pontes da Silva Junior |
 
 ## Sobre 
-Contextualize, usando referências, links, e outros materiais como fontes.
+Esse projeto visa recriar um tradutor online como o linguee e o Google Tradutor
 
 ## Screenshots Primeira Entrega <<FOCO: DSW(Base)>>
 Adicione 2 ou mais screenshots em termos de artefatos da Primeira Entrega.
