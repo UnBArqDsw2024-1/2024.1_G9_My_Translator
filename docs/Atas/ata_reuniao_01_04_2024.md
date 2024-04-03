@@ -12,6 +12,12 @@
 | 200020323 | Jefferson Sena Oliveira |
 | 190036761 | Pedro Victor Lima Torreão |
 
+## Data e Local
+
+| Data | Local |
+|------|-------|
+| 01/04/2024 | Virtual via Microsoft Teams() |
+
 ## Tópicos Abordados
 
 - Revisar Diretrizes
@@ -57,6 +63,9 @@ Neste tópico cada membro irá sugerir uma metodologia estudada, tal como sua mo
 | Tiago Albuquerque | Mapa mental, pois permite investigarmos e identificar o domínio da aplicação do nosso projeto e posteriormente será possível subdividir esse mapa mental geral em mapas mentais menores focados em subtópicos do nosso domínio de aplicação, possibilitando uma modularização. |
 | Pedro Torreão | Mapa Mental, pois podemos ver diferentes pontos de vista dentro da equipe. MoScoW para a priorização dos requisitos licitados. |
 | Francisco Mizael | Mapa mental ou Rich Picture acredito ser um bom artefato para nos orientar visualmente e por as ideias abstraídas em imagens e fluxos conectados. Acho necessário um artefato que permita a expressão das ideias em palavras como o 5W2H, sobretudo nos auxiliar a responder perguntas mais objetivas. Gosto bastante da ideia sugerida de utilizarmos o MoScoW para priorizar requisitos. |
+
+## Divisão do trabalho e acordos
+Foi acordado nesta primeira reunião que iremos estar realizando a criação do mapa mental, por meio de um link compartilhado no aplicativo [Canva](https://www.canva.com/) de maneira assíncrona onde cada membro acrescenta sua ideia no esquema compartilhado. Objetivos de escolha definitiva da metodologia e design sprint tal como desbaste das ideias acrescentadas no mapa mental devem ser definidas na próxima reunião síncrona virtual que ocorrerá dia 05/04/2024 via Microsoft Teams.
 
 
 ## Histórico de Versão
