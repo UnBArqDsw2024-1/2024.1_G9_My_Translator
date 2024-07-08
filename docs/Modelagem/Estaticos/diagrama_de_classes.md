@@ -1,0 +1,50 @@
+# Diagrama de Classes
+## Introdução
+
+<div align="justify">
+    <p> 
+        O Diagrama de Classes é uma representação visual que descreve a estrutura de um sistema, mostrando suas classes, atributos, métodos e os relacionamentos entre elas.
+
+No diagrama de classes UML, as classes são representadas por retângulos divididos em três partes: o nome da classe, seus atributos e seus métodos. As linhas que conectam essas classes indicam os relacionamentos, que podem ser de vários tipos, como herança (onde uma classe "herda" as características de outra), associação (onde uma classe está relacionada a outra), agregação (onde uma classe contém outra) e composição (onde uma classe é composta por outra de forma mais estreita). 
+
+Essa ferramenta é essencial no desenvolvimento de software, pois ajuda a planejar e visualizar a estrutura do código antes mesmo de começar a escrever. Ela oferece uma visão clara de como as diferentes partes do sistema se conectam e interagem, facilitando a comunicação entre os membros da equipe e garantindo que todos estejam alinhados quanto à arquitetura do sistema.
+    </p>
+</div>
+
+## Aplicação
+
+<div align="justify">
+    <p>
+        No projeto, o diagrama visa explicar o processo de tradução dentro da aplicação, abrangendo a capacidade de solicitar significados e sinônimos de palavras no texto. O texto para tradução pode ser inserido manualmente ou importado de um arquivo. Além disso, detalhamos o processo de autenticação das APIs externas que serão utilizadas.
+    </p>
+</div>
+
+## Diagrama
+
+<center>
+  <figure>
+    <figcaption>Figura 1: Diagrama de Classe</figcaption>
+  </figure>
+</center>
+<img src="./img/Modelagem/DiagramClasse.jpg" >
+<center>
+  <figure>
+    <figcaption>Autores: Francisco Mizael, Daniel Oda</figcaption>
+  </figure>
+</center>
+
+## Referências
+> [1] UML Class Diagram Tutorial. Disponível em: https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/ . Acesso em 07/07/2024
+> [2] Class diagrams. Disponível em: https://www.ibm.com/docs/en/rsm/7.5.0?topic=structure-class-diagrams . Acesso em 08/07/2024
+> [3] DeepL API Docs. Disponível em: https://developers.deepl.com/docs/v/pt-br . Acesso em 08/07/2024
+> [4] 05b - VideoAula - DSW-Modelagem - Diagrama de Classe. Disponível em: https://unbbr-my.sharepoint.com/personal/mileneserrano_unb_br/_layouts/15/stream.aspx?id=%2Fpersonal%2Fmileneserrano%5Funb%5Fbr%2FDocuments%2FArqDSW%20%2D%20V%C3%ADdeosOriginais%2F05b%20%2D%20VideoAula%20%2D%20DSW%2DModelagem%20%2D%20Diagrama%20de%20Classe%2Emp4&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E2ae85a79%2Daae0%2D4bb6%2Dbf4b%2D60765f85f9ac
+> . Acesso em 07/07/2024
+
+## Historico de versão
+<center>
+
+| Versão |   Data   |                           Alteração                           |                                        Participantes                                         |
+| :----: | :------: |:-------------------------------------------------------------:|:--------------------------------------------------------------------------------------------:|
+|  1.0   | 08/07/24 |                     Criação do documento                      |                                            [Daniel Oda](https://github.com/danieloda/), [Francisco Mizael](https://github.com/frmiza/) |
+
+</center>
