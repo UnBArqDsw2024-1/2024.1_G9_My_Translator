@@ -26,7 +26,7 @@ Essa ferramenta é essencial no desenvolvimento de software, pois ajuda a planej
     <figcaption>Figura 1: Diagrama de Classe</figcaption>
   </figure>
 </center>
-<img src="./img/Modelagem/DiagramClasse.jpg" >
+<img src="../../img/Modelagem/DiagramClasse.jpg" >
 <center>
   <figure>
     <figcaption>Autores: Francisco Mizael, Daniel Oda</figcaption>
