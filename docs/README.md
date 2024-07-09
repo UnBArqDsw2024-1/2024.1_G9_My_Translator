@@ -24,10 +24,42 @@
 Esse projeto visa recriar um tradutor online como o linguee e o Google Tradutor
 
 ## Screenshots Primeira Entrega <<FOCO: DSW(Base)>>
-Adicione 2 ou mais screenshots em termos de artefatos da Primeira Entrega.
+<center>
+  <figure>
+    <figcaption>Figura 1: Diagrama da Visão Geral</figcaption>
+  </figure>
+</center>
+<img src="./img/bpmn/diagrama_visao.jpeg" >
+
+<center>
+  <figure>
+    <figcaption>Figura 2: Diagrama do Design Sprint</figcaption>
+  </figure>
+</center>
+<img src="./img/bpmn/diagram_design_sprint.svg" >
 
 ## Screenshots Segunda Entrega <<FOCO: DSW(Modelagem)>>
-Adicione 2 ou mais screenshots em termos de artefatos da Segunda Entrega.
+<center>
+  <figure>
+    <figcaption>Figura 1: Diagrama de Pacotes</figcaption>
+  </figure>
+</center>
+<img src="./img/diagramas/diagrama_de_pacotes.jpeg" >
+
+<center>
+  <figure>
+    <figcaption>Figura 2: Diagrama de Componentes</figcaption>
+  </figure>
+</center>
+<img src="./img/diagramas/Diagrama_de_componentes.svg" >
+
+<center>
+  <figure>
+    <figcaption>Figura 3: Diagrama de Atividades</figcaption>
+  </figure>
+</center>
+<img src="./img/diagramas/diagrama-de-atividade.png" >
+
 
 ## Screenshots Terceira Entrega <<FOCO: DSW(Padrões de Projeto)>>
 Adicione 2 ou mais screenshots em termos de artefatos da Terceira Entrega.
