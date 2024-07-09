@@ -11,7 +11,8 @@ Para relizar a criação deste artefato, foi feita a análise do escopo do proje
 ![Diagrama de Atividades](../../img/diagramas/diagrama-de-atividade.png)
 
 ## Apresentação
-<!-- Video -->
+
+<iframe width="700" height="500" src="https://www.youtube.com/embed/6ujP9bLBBks" title="Diagrama de atividades" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## 4. Participantes
 
@@ -30,4 +31,4 @@ Documentação UML Activity Diagrams Overview, disponível em https://www.uml-di
 
 | Data      | Versão | Descrição           | Autor(es)| Revisores |
 |-----------| -- |---------------------| -- |-----------|
-| 8/07/2024 |1.0| Criação do artefato | [Gabriel](https://github.com/Gabrie1Barbosa), [Juan Pablo](https://github.com/Juan-Ricarte) |  |
+| 8/07/2024 |1.0| Criação do artefato | [Gabriel](https://github.com/Gabrie1Barbosa), [Juan Pablo](https://github.com/Juan-Ricarte) | Gabriel |
