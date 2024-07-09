@@ -1,16 +1,16 @@
 # Diagrama de Atividades
 
-## Introdução
+## 1. Introdução
 <p align="justify"> Um diagrama de atividades é um dos diagramas da UML (Unified Modeling Language) utilizado para modelar o fluxo de trabalho ou atividades em um sistema. Ele descreve o comportamento dinâmico do sistema ao mostrar a sequência de atividades e o fluxo de controle entre elas. Este tipo de diagrama é especialmente útil para representar processos de negócios e fluxos de trabalho complexos, permitindo uma análise detalhada de como as atividades são executadas e como se inter-relacionam.</p>
 
-## Metodologia
+## 2. Metodologia
 Para relizar a criação deste artefato, foi feita a análise do escopo do projeto, diagrama de classes e principalmente os requisitos elicitados e priorizados durante projeto. Foi utilizado para a criação do diagrama de atividades o Lucidchart, uma ferramenta de design e desenho que pode ser compartilhada entre várias pessoas.
 
 ## Resultado
 
 ![Diagrama de Atividades](../../img/diagramas/diagrama-de-atividade.png)
 
-## Apresentação
+## 3. Apresentação
 
 <iframe width="700" height="500" src="https://www.youtube.com/embed/6ujP9bLBBks" title="Diagrama de atividades" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
