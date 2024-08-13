@@ -1,0 +1,27 @@
+body{
+  background-color:rgb(172, 170, 167);
+}
+
+header{
+  background-color: #5c5a5a;
+  padding: 1px;
+  color: #fff;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+textarea{
+  width: 45%;
+  height: 200px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea[readonly]{
+  background-color: #eee;
+}
