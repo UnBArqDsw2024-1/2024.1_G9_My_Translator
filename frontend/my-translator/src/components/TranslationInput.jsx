@@ -10,6 +10,7 @@ function TranslationInput({onChange}){
  
     return (
         <textarea
+            className="to-translate-box"
             value={text}
             onChange={handleChange}
             placeholder="Digite o texto para tradução"

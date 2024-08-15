@@ -2,9 +2,10 @@ import { useState } from "react";
 import Header from "./Header";
 import TranslationInput from "./TranslationInput";
 import TranslationOutput from "./TranslationOutput";
+import DictionaryOutput from "./DictionaryOutput";
 
 function TranslatorPage(){
-    const [tranlatedText, setTranslatedText] = useState('');
+    const [translatedText, setTranslatedText, dictionaryText] = useState('');
 
     const handleInputChange = (text) => {
         //Logica da traducao
@@ -28,10 +29,14 @@ function TranslatorPage(){
                     </select>
                 </div>
             </div>
+            
             <section className="container">
+            <div className="translate-container">
+                <TranslationInput onChange={handleInputChange} />
+                <TranslationOutput text={translatedText} />
+            </div>
+                <DictionaryOutput text={dictionaryText} />
                 
-            <TranslationInput onChange={handleInputChange} />
-            <TranslationOutput text={tranlatedText} />
             </section>
         </main>
     )
