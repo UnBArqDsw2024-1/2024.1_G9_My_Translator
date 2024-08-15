@@ -1,19 +1,9 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import Header from "./Header";
 import TranslationInput from "./TranslationInput";
 import TranslationOutput from "./TranslationOutput";
-import './LanguageSelector.css'; 
-
-
-const languages = [
-    "Detectar idioma", "alemão", "árabe", "búlgaro", "chinês (simplificado)", 
-    "chinês (tradicional)", "coreano", "dinamarquês", "eslovaco", "esloveno", 
-    "espanhol", "estônio", "finlandês", "francês", "grego", "holandês", 
-    "húngaro", "indonésio", "inglês (americano)", "inglês (britânico)", 
-    "italiano", "japonês", "letão", "lituano", "norueguês (bokmål)", "polonês", 
-    "português", "português (brasileiro)", "romeno", "russo", "sueco", 
-    "tcheco", "turco", "ucraniano"
-];
+import './LanguageSelector.css';
+import axios from "axios";
 
 function TranslatorPage() {
     const [translatedText, setTranslatedText] = useState('');
@@ -22,6 +12,30 @@ function TranslatorPage() {
     const [isSourceDropdownOpen, setIsSourceDropdownOpen] = useState(false);
     const [isTargetDropdownOpen, setIsTargetDropdownOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
+    const [languagesSource, setLanguagesSource] = useState([]);
+    const [languagesTarget, setLanguagesTarget] = useState([]);
+
+    const handleGetLanguages = async () => {
+        try {
+            debugger;
+            const response = await axios.get('http://localhost:8000/api/translate/languages_supported', {}, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            });
+
+            const [sourceLanguages, targetLanguages] = response.data;
+            setLanguagesSource(Object.values(sourceLanguages));
+            setLanguagesTarget(Object.values(targetLanguages));
+        } catch (error) {
+            console.error("Erro ao buscar as linguas:", error);
+        }
+    };
+
+    useEffect(() => {
+        handleGetLanguages();
+    }, []);
 
     const handleInputChange = (text) => {
         // Lógica da tradução
@@ -50,7 +64,11 @@ function TranslatorPage() {
         setSearchTerm(event.target.value);
     };
 
-    const filteredLanguages = languages.filter((language) =>
+    const sourceFilteredLanguages = languagesSource.filter((language) =>
+        language.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    const targetFilteredLanguages = languagesTarget.filter((language) =>
         language.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
@@ -77,7 +95,7 @@ function TranslatorPage() {
                             onChange={handleSearch}
                         />
                         <ul className="language-list">
-                            {filteredLanguages.map((language, index) => (
+                            {sourceFilteredLanguages?.map((language, index) => (
                                 <li 
                                     key={index} 
                                     onClick={() => handleSourceLanguageSelect(language)}
@@ -107,7 +125,7 @@ function TranslatorPage() {
                             onChange={handleSearch}
                         />
                         <ul className="language-list">
-                            {filteredLanguages.map((language, index) => (
+                            {targetFilteredLanguages?.map((language, index) => (
                                 <li 
                                     key={index} 
                                     onClick={() => handleTargetLanguageSelect(language)}
