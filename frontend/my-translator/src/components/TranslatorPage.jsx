@@ -5,19 +5,35 @@ import TranslationOutput from "./TranslationOutput";
 import './LanguageSelector.css';
 import axios from "axios";
 
+const DE_PARA_TARGET = {
+    'Inglês (Britânico)': 'Inglês',
+    'Inglês (Americano)': 'Inglês',
+    'Português (Brasileiro)': 'Português',
+    'Português (Europeu)': 'Português',
+    'Chinês (simplificado)': 'Chinês',
+}
+
+const DE_PARA_SOURCE= {
+    'Inglês': 'Inglês (Americano)',
+    'Português': 'Português (Brasileiro)',
+    'Chinês': 'Chinês (simplificado)',
+}
+
 function TranslatorPage() {
+    const [text, setText] = useState('');
     const [translatedText, setTranslatedText] = useState('');
-    const [selectedSourceLanguage, setSelectedSourceLanguage] = useState('Inglês');
-    const [selectedTargetLanguage, setSelectedTargetLanguage] = useState('Português');
+    const [selectedSourceLanguage, setSelectedSourceLanguage] = useState('Português');
+    const [selectedTargetLanguage, setSelectedTargetLanguage] = useState('Inglês (Americano)');
     const [isSourceDropdownOpen, setIsSourceDropdownOpen] = useState(false);
     const [isTargetDropdownOpen, setIsTargetDropdownOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [languagesSource, setLanguagesSource] = useState([]);
     const [languagesTarget, setLanguagesTarget] = useState([]);
+    const [dictLanguagesSource, setDictLanguagesSource] = useState([]);
+    const [dictLanguagesTarget, setDictLanguagesTarget] = useState([]);
 
     const handleGetLanguages = async () => {
         try {
-            debugger;
             const response = await axios.get('http://localhost:8000/api/translate/languages_supported', {}, {
                 headers: {
                     'Content-Type': 'application/json',
@@ -26,8 +42,12 @@ function TranslatorPage() {
             });
 
             const [sourceLanguages, targetLanguages] = response.data;
-            setLanguagesSource(Object.values(sourceLanguages));
-            setLanguagesTarget(Object.values(targetLanguages));
+
+            setDictLanguagesSource(sourceLanguages);
+            setLanguagesSource(Object.keys(sourceLanguages));
+
+            setDictLanguagesTarget(targetLanguages);
+            setLanguagesTarget(Object.keys(targetLanguages));
         } catch (error) {
             console.error("Erro ao buscar as linguas:", error);
         }
@@ -73,9 +93,18 @@ function TranslatorPage() {
     );
 
     const swapLanguages = () => {
-        const temp = selectedSourceLanguage;
-        setSelectedSourceLanguage(selectedTargetLanguage);
-        setSelectedTargetLanguage(temp);
+        let tempTargetLanguage = selectedTargetLanguage;
+        let tempSourceLanguage = selectedSourceLanguage;
+        if(Object.keys(DE_PARA_TARGET).includes(tempTargetLanguage)) {
+            tempTargetLanguage = DE_PARA_TARGET[tempTargetLanguage];
+        }
+        if(Object.keys(DE_PARA_SOURCE).includes(tempSourceLanguage)) {
+            tempSourceLanguage = DE_PARA_SOURCE[tempSourceLanguage];
+        }
+        setSelectedSourceLanguage(tempTargetLanguage);
+        setSelectedTargetLanguage(tempSourceLanguage);
+        setText(translatedText);
+        setTranslatedText(text);
     };
 
     return (
@@ -139,8 +168,16 @@ function TranslatorPage() {
                 )}
             </section>
             <section className="container">
-                <TranslationInput onChange={handleInputChange} />
-                <TranslationOutput text={translatedText} />
+                <TranslationInput onChange={handleInputChange} text={text} setText={setText} />
+                <TranslationOutput
+                    text={translatedText}
+                    selectedSourceLanguage={selectedSourceLanguage}
+                    selectedTargetLanguage={selectedTargetLanguage}
+                    languagesSource={dictLanguagesSource}
+                    languagesTarget={dictLanguagesTarget}
+                    translatedText={translatedText}
+                    setTranslatedText={setTranslatedText}
+                />
             </section>
         </main>
     );

@@ -19,14 +19,19 @@ deepl_service.get_supported_languages()
                          tags=["Translation"],
                          status_code=200,
                          response_model=TextObject)
-async def translate_by_text(text_object: TextObject):
+async def translate_by_text(request_object: TextObject):
     try:
         origin = Origin()
-        text = TextObject(text=text_object.text)
-        origin.set_origin(OriginModel.TEXT, text)
-        control_service = ControlService(origin)
+        text_object = TextObject(
+            text=request_object.text,
+            source_language=request_object.source_language,
+            target_language=request_object.target_language)
+        origin.set_origin(OriginModel.TEXT, text_object)
+        control_service = ControlService(origin, deepl_service)
         translated_text = control_service.translate_text.text  # É possível buscar a lingua detectada pelo objeto translated_text do Deepl
-        return TextObject(text=translated_text)
+        return TextObject(text=translated_text,
+                          source_language=request_object.source_language,
+                          target_language=request_object.target_language)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao traduzir texto: {e}")
 

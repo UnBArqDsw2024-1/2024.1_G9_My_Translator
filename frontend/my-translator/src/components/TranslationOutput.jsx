@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function TranslationOutput({ text }) {
-    const [translatedText, setTranslatedText] = useState("");
+function TranslationOutput({ text, selectedSourceLanguage, selectedTargetLanguage, languagesSource, languagesTarget, translatedText, setTranslatedText }) {
 
     const handleApiTranslation = async () => {
         try {
-            const response = await axios.post('http://localhost:8000/api/translate/text', {
-                text: text
-            }, {
+            const data = {
+                text: text,
+                source_language: languagesSource[selectedSourceLanguage],
+                target_language: languagesTarget[selectedTargetLanguage]
+            }
+            console.log('data', data)
+            const response = await axios.post('http://localhost:8000/api/translate/text', data, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
@@ -22,7 +25,11 @@ function TranslationOutput({ text }) {
     };
 
     useEffect(() => {
-        if (text) {
+        if (
+            ![null, undefined, ''].includes(text) &&
+            ![null, undefined, ''].includes(selectedSourceLanguage) &&
+            ![null, undefined, ''].includes(selectedTargetLanguage)
+        ) {
             handleApiTranslation();
         }
     }, [text]);

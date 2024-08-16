@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-function TranslationInput({ onChange }) {
-    const [text, setText] = useState('');
+function TranslationInput({ onChange, text, setText}) {
     const [debounceTimeout, setDebounceTimeout] = useState(null);
 
     const handleChange = (e) => {

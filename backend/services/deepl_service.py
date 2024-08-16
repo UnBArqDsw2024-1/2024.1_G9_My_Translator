@@ -32,12 +32,14 @@ class DeeplService:
         self.de_para_code_source = {l.name: l.code for l in source_languages}
 
 
-    def translate_text(self, text: Union[str, Iterable[str]], source_lang: str = 'EN', target_lang: str = 'PT-BR'):
+    def translate_text(self, text: Union[str, Iterable[str]], source_lang: str = 'PT', target_lang: str = 'EN-US'):
         try:
+            source_code = self.de_para_code_source[source_lang]
+            target_code = self.de_para_code_target[target_lang]
             text = self.translator.translate_text(
                 text,
-                source_lang=source_lang,
-                target_lang=target_lang,
+                source_lang=source_code,
+                target_lang=target_code,
                 formality=deepl.Formality.DEFAULT
             )
             self.health_check()

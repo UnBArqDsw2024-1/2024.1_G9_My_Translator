@@ -1,19 +1,17 @@
-from backend.models.input_model import TextObject, FileObject
-from backend.models.origin_model import Origin, OriginModel
+from backend.models.origin_model import Origin
 from backend.services.deepl_service import DeeplService
 
 
-class ControlService(DeeplService):
-    def __init__(self, origin_obj: Origin):
-        super().__init__()
+class ControlService:
+    def __init__(self, origin_obj: Origin, deepl_service: DeeplService):
         self.origin_obj = origin_obj
         if origin_obj.text:
-            translated_text = self.translate_text(origin_obj.text)
+            translated_text = deepl_service.translate_text(origin_obj.text, origin_obj.source_language, origin_obj.target_language)
         elif origin_obj.file:  # Validar
             print('ARQUIVO')
             print(origin_obj.file_type.value)
             print(origin_obj.file_content)
-            translated_text = self.translate_text(origin_obj.file_content)
+            translated_text = deepl_service.translate_text(origin_obj.file_content)
         else:
             raise NotImplementedError('Origem inválida')
 

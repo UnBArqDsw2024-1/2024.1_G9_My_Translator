@@ -1,6 +1,6 @@
 from enum import Enum
 from typing import Union, Optional
-from backend.models.input_model import TextObject, FileObject, bytes_type
+from backend.models.input_model import TextObject, FileObject, bytes_type, LanguageModel
 from backend.utilities.read_utility import ReadUtility
 
 
@@ -18,6 +18,8 @@ class OriginModel(Enum):
 class Origin:
     def __init__(self):
         self.ReadUtility = ReadUtility(self)
+        self.source_language = 'PT'
+        self.target_language = 'EN-US'
         self.file_content = None
         self.translate_object = None
         self.text = None
@@ -26,6 +28,8 @@ class Origin:
 
     def set_origin(self, origin: OriginModel, translate_object: Union[TextObject, FileObject]):
         self.translate_object = translate_object
+        self.source_language = translate_object.source_language
+        self.target_language = translate_object.target_language
         if origin == OriginModel.TEXT and isinstance(translate_object, TextObject):
             self.text = translate_object.text
         elif origin == OriginModel.FILE and isinstance(translate_object, FileObject):
