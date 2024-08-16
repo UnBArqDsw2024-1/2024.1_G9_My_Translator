@@ -20,6 +20,7 @@ const DE_PARA_SOURCE= {
 }
 
 function TranslatorPage() {
+    const [localText, setLocalText] = useState('');
     const [text, setText] = useState('');
     const [translatedText, setTranslatedText] = useState('');
     const [selectedSourceLanguage, setSelectedSourceLanguage] = useState('Português');
@@ -58,8 +59,7 @@ function TranslatorPage() {
     }, []);
 
     const handleInputChange = (text) => {
-        // Lógica da tradução
-        setTranslatedText(text.split('').join(''));
+        setText(text.split('').join(''));
     };
 
     const toggleSourceDropdown = () => {
@@ -103,6 +103,7 @@ function TranslatorPage() {
         }
         setSelectedSourceLanguage(tempTargetLanguage);
         setSelectedTargetLanguage(tempSourceLanguage);
+        setLocalText(translatedText);
         setText(translatedText);
         setTranslatedText(text);
     };
@@ -168,9 +169,9 @@ function TranslatorPage() {
                 )}
             </section>
             <section className="container">
-                <TranslationInput onChange={handleInputChange} text={text} setText={setText} />
+                <TranslationInput onChange={handleInputChange} localText={localText} setLocalText={setLocalText} />
                 <TranslationOutput
-                    text={translatedText}
+                    text={text}
                     selectedSourceLanguage={selectedSourceLanguage}
                     selectedTargetLanguage={selectedTargetLanguage}
                     languagesSource={dictLanguagesSource}

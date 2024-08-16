@@ -2,12 +2,11 @@ import json
 from typing import Dict, List
 
 from fastapi import APIRouter, Request, HTTPException
-from starlette.responses import JSONResponse
 
-from backend.models.input_model import TextObject
-from backend.models.origin_model import Origin, OriginModel
-from backend.services.control_service import ControlService
-from backend.services.deepl_service import DeeplService
+from models.input_model import TextObject
+from models.origin_model import Origin, OriginModel
+from services.control_service import ControlService
+from services.deepl_service import DeeplService
 
 translation_router = APIRouter(prefix="/translate")
 deepl_service = DeeplService()

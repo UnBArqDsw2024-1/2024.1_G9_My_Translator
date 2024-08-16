@@ -60,26 +60,27 @@ Esse projeto visa recriar um tradutor online como o linguee e o Google Tradutor
 </center>
 <img src="./img/diagramas/diagrama-de-atividade.png" >
 
-
-## Screenshots Terceira Entrega <<FOCO: DSW(Padrões de Projeto)>>
-Adicione 2 ou mais screenshots em termos de artefatos da Terceira Entrega.
-
-## Screenshots Quarta Entrega (FINAL) <<FOCOS: Arquitetura & Reutilização de Software & PROJETO FINAL>>
-Adicione 2 ou mais screenshots em termos de artefatos da Quarta Entrega.
-
-## Descritivo dos Principais Aspectos Técnicos 
-**Principal(is) Metodologia(s) Adotada(s)**: xxxxxx<br>
-**Principais Linguagens Utilizadas e/ou Pretendidas**: xxxxxx<br>
-**Principais Tecnologias Utilizadas e/ou Pretendidas**: xxxxxx<br>
-**Principal(is) Estilo(s) Arquitetural(is) Adotado(s)**: xxxxxx<br>
+## Arquitetura & Reutilização de Software & PROJETO FINAL
+[Vídeo de Apresentação com o MVP do Projeto Final](https://youtu.be/F3ZZFLypR-8)
 
 ## Há algo a ser executado?
 
-( ) SIM
+(X) SIM
 
 ( ) NÃO
 
-Se SIM, insira um manual (ou um script) para auxiliar ainda mais os interessados na execução.
-
-## Informações Complementares 
-Quaisquer outras informações adicionais podem ser descritas nessa seção.
+Manual de execução (precisa ter o [python](https://www.python.org) e o [npm](https://www.npmjs.com) instalados em sua máquina):
+1. Clone o repositório
+2. Para executar o frontend, execute os seguintes comandos:
+```shell
+cd frontend
+cd my-translator
+npm install
+npm run dev
+```
+3. Para executar o backend, execute os seguintes comandos:
+```shell
+cd backend
+pip install -r requirements.txt
+py main.py
+```

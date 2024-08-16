@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-function TranslationInput({ onChange, text, setText}) {
+function TranslationInput({ onChange, localText, setLocalText}) {
     const [debounceTimeout, setDebounceTimeout] = useState(null);
 
     const handleChange = (e) => {
-        setText(e.target.value);
+        setLocalText(e.target.value);
 
         if (debounceTimeout) {
             clearTimeout(debounceTimeout);
@@ -19,7 +19,7 @@ function TranslationInput({ onChange, text, setText}) {
 
     return (
         <textarea
-            value={text}
+            value={localText}
             onChange={handleChange}
             placeholder="Digite o texto para tradução"
         />

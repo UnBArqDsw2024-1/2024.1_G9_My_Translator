@@ -1,8 +1,8 @@
 import deepl
 from typing import Union, Iterable, Tuple, List
 
-from backend.models.deepl_constants import DE_PARA_TARGET, DE_PARA_SOURCE
-from backend.utilities.aws_utility import AwsUtility
+from models.deepl_constants import DE_PARA_TARGET, DE_PARA_SOURCE
+from utilities.aws_utility import AwsUtility
 
 import logging as log
 

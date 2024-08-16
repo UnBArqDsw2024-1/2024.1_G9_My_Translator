@@ -1,6 +1,6 @@
 from fastapi import FastAPI, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
-from backend.routers.translation_router import translation_router
+from routers.translation_router import translation_router
 
 app = FastAPI()
 api = APIRouter(prefix='/api')

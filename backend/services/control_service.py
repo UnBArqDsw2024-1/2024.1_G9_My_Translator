@@ -1,5 +1,5 @@
-from backend.models.origin_model import Origin
-from backend.services.deepl_service import DeeplService
+from models.origin_model import Origin
+from services.deepl_service import DeeplService
 
 
 class ControlService:

@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Union, Optional
-from backend.models.input_model import TextObject, FileObject, bytes_type, LanguageModel
-from backend.utilities.read_utility import ReadUtility
+from models.input_model import TextObject, FileObject, bytes_type, LanguageModel
+from utilities.read_utility import ReadUtility
 
 
 class FileTypeModel(Enum):
