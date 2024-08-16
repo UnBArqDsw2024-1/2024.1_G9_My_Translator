@@ -1,1 +1,5 @@
 pydantic
+deepl
+boto3
+fastapi
+uvicorn

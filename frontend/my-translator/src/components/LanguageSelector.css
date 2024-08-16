@@ -1,18 +1,28 @@
 .language-selector {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     background-color: #f5f5f5;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px 0;
+    
 }
 
-.select-container {
+
+.selected-language {
     position: relative;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
     margin: 0 10px;
+    
 }
+
 
 .language-select {
     padding: 10px;
@@ -29,12 +39,57 @@
     border-color: #007bff;
 }
 
-.swap-icon {
-    font-size: 24px;
-    color: #333;
+.dropdown-arrow {
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    position: initial;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.language-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.language-list li {
+    padding: 8px 10px;
     cursor: pointer;
 }
 
+.language-list li:hover, .language-list li.selected {
+    background-color: #f0f0f0;
+}
+
+.swap-icon {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    margin: 0 20px;
+    color: #333
+}
+
+
 .swap-icon:hover {
     color: #007bff;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border-radius: 30px;
 }

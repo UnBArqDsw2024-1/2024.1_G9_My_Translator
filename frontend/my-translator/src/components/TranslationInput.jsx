@@ -1,20 +1,29 @@
-import { useState } from "react"
+import { useState } from "react";
 
-function TranslationInput({onChange}){
-    const [text, setText] =useState('');
+function TranslationInput({ onChange, localText, setLocalText}) {
+    const [debounceTimeout, setDebounceTimeout] = useState(null);
 
     const handleChange = (e) => {
-        setText(e.target.value);
-        onChange(e.target.value);
+        setLocalText(e.target.value);
+
+        if (debounceTimeout) {
+            clearTimeout(debounceTimeout);
+        }
+
+        const timeout = setTimeout(() => {
+            onChange(e.target.value);
+        }, 500);
+
+        setDebounceTimeout(timeout);
     };
- 
+
     return (
         <textarea
-            value={text}
+            value={localText}
             onChange={handleChange}
             placeholder="Digite o texto para tradução"
-            />
+        />
     );
 }
 
-export default TranslationInput
+export default TranslationInput;
